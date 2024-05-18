@@ -1,6 +1,6 @@
 up&down game [001]
 
-version 0.1.1
+version 0.1.2
 
-- create README file
+- UI modified
 - bug fixed

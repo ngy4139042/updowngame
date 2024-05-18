@@ -61,9 +61,9 @@ function App() {
   }
 
   function resetButtons() {
-    buttonArray.forEach((button) => {
-      button.className = "button";
-    });
+    for (let i = 0; i < buttonArray.length; i++) {
+      buttonArray[i].className = "button";
+    }
   }
 
   return (
