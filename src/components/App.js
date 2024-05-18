@@ -4,8 +4,6 @@ import { useState } from "react";
 import Buttons from "./Buttons";
 import Board from "./Board";
 import Pane from "./Pane";
-
-const buttonArray = document.querySelectorAll(".button");
 let answer = random();
 
 function App() {
@@ -14,6 +12,7 @@ function App() {
   let [updown, setUpdown] = useState("-");
   let [hidden, setHidden] = useState("hidden");
   let [zindex, setZindex] = useState("zindex");
+  let [classlist, setClasslist] = useState("button");
 
   function handleButtonMouseDown(e) {
     if (
@@ -50,7 +49,10 @@ function App() {
       setZindex("zindex");
     }, 1000);
     resetBoard();
-    resetButtons();
+    setClasslist("");
+    setTimeout(() => {
+      setClasslist("button");
+    }, 1);
   }
 
   function resetBoard() {
@@ -58,12 +60,6 @@ function App() {
     setSelected("-");
     setUpdown("-");
     answer = random();
-  }
-
-  function resetButtons() {
-    for (let i = 0; i < buttonArray.length; i++) {
-      buttonArray[i].className = "button";
-    }
   }
 
   return (
@@ -78,6 +74,7 @@ function App() {
       <Buttons
         onMouseDown={handleButtonMouseDown}
         onMouseUp={handleButtonMouseUp}
+        classlist={classlist}
       ></Buttons>
       <Pane hidden={hidden} zindex={zindex}></Pane>
     </div>

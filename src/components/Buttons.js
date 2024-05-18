@@ -1,13 +1,13 @@
 import "./Buttons.css";
 
-function Buttons({ onMouseDown, onMouseUp, correct }) {
+function Buttons({ onMouseDown, onMouseUp, classlist }) {
+  const buttonArray = [];
   function returnEachButton() {
-    const buttonArray = [];
     for (let i = 0; i < 100; i++) {
       const button = (
         <div
           key={i}
-          className="button"
+          className={`${classlist}`}
           onMouseDown={onMouseDown}
           onMouseUp={onMouseUp}
         >
@@ -16,7 +16,6 @@ function Buttons({ onMouseDown, onMouseUp, correct }) {
       );
       buttonArray.push(button);
     }
-
     return <div className="buttons">{buttonArray}</div>;
   }
 
