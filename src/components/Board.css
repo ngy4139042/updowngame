@@ -1,0 +1,15 @@
+.board {
+  display: flex;
+  flex-direction: column;
+  min-width: 1180px;
+}
+
+.details {
+  margin-top: -30px;
+  display: flex;
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  justify-content: space-between;
+  color: #b3b3b3;
+}

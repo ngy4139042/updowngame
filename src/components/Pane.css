@@ -1,0 +1,43 @@
+.pane {
+  transition: opacity 0.5s;
+}
+
+.pane1 {
+  background-color: white;
+  opacity: 90%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.pane2 {
+  background-color: black;
+  opacity: 30%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.pane3 {
+  background-color: black;
+  opacity: 30%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.pane4 {
+  background-color: black;
+  opacity: 30%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
