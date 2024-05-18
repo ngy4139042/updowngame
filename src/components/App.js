@@ -62,11 +62,7 @@ function App() {
 
   function resetButtons() {
     buttonArray.forEach((button) => {
-      if (button.classList.contains("correct")) {
-        button.classList.remove("correct");
-      } else if (button.classList.contains("incorrect")) {
-        button.classList.remove("incorrect");
-      }
+      button.className = "button";
     });
   }
 
